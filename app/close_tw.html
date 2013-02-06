@@ -1,0 +1,57 @@
+<html>
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+<title>WeHeartPics - Twitter auth processing...</title>
+<script>
+function log(msg) {
+	console.log(msg);
+	/*
+	if (true)
+	{
+		setTimeout(function() {
+			throw new Error(msg);
+		}, 0);
+	}*/
+}
+
+function getCookie(name) {
+    var nameEQ = name + "=";
+    var ca = document.cookie.split(';');
+    for(var i=0;i < ca.length;i++) {
+        var c = ca[i];
+        while (c.charAt(0)==' ') c = c.substring(1,c.length);
+        if (c.indexOf(nameEQ) == 0) return c.substring(nameEQ.length,c.length);
+    }
+    return null;
+}
+
+function onloaded()
+{
+
+
+    if (window.opener!=null)
+	{
+        var loc = new String(document.location);
+
+
+        loc = loc.substring(loc.indexOf("?")+1, loc.length);
+        loc = loc.split("&");
+
+        if (loc.length<3)
+            return false;
+
+        var user_id = loc[0].split("=")[1];
+        var user_token = loc[1].split("=")[1];
+        var user_secret = loc[2].split("=")[1];
+
+
+		window.opener.WHP.auth.TW.getAuth(user_id, user_token, user_secret);
+	}
+	window.close();
+}
+</script>
+
+</head>
+<body onLoad="onloaded();" class="body_main" leftmargin="0" rightmargin="0" topmargin="0" bottommargin="0" >
+</body>
+</html>

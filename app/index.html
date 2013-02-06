@@ -1,0 +1,2030 @@
+<!DOCTYPE html
+		PUBLIC "-//W3C//DTD XHTML 1.0 Strict//EN"
+		"http://www.w3.org/TR/xhtml1/DTD/xhtml1-strict.dtd">
+
+<html xmlns="http://www.w3.org/1999/xhtml" >
+<head>
+
+	<meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
+	<meta name="HandheldFriendly" content="true" />
+	<meta name="viewport"
+		  content="width=1000, target-densitydpi=320,user-scalable=no" />
+
+
+	<meta property="og:title" content="WeHeartPics" />
+	<meta property="og:type" content="website" />
+	<meta property="og:url" content="http://weheartpics.com/" />
+	<meta property="og:site_name" content="WeHeartPics" />
+	<meta property="og:description" content="We Heart Pics позволяет вам не думать о том, что снимать. Множество идей для фотографий на каждый день!" />
+
+	<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+	<meta name="DESCRIPTION" content="Enough with sharing links and occasional moments, take care about the real lives of people." />
+
+
+
+<title>WeHeartPics</title>
+
+<!-- build:css /styles/whp.css -->
+<link rel="stylesheet" href="/styles/css/whp.css"/>
+<!-- endbuild -->
+
+
+<!-- build:js /scripts/vendor.js -->
+<script type="text/javascript" src="/scripts/vendor/jquery.js"></script>
+<script src="/scripts/vendor/jquery-ui-draggable.min.js"></script>
+<script src="/scripts/vendor/jquery.mousewheel.min.js"></script>
+<script src="/scripts/vendor/instagram.min.js"></script>
+<!-- endbuild -->
+
+
+<!-- build:js /scripts/all.js -->
+<script src="/scripts/01whp_lib.js"></script>
+<script src="/scripts/02whp_main.js"></script>
+<!-- endbuild -->
+
+
+<!-- build:js /scripts/l10n/all.js -->
+<script src="/scripts/l10n/l10n_common.js"></script>
+<!-- endbuild -->
+
+
+</head>
+<body onLoad="WHP.onLoad(event);" class="body_invisible" leftmargin="0" rightmargin="0" topmargin="0" bottommargin="0" >
+
+<div id="fb-root" style="display:none;"></div>
+
+
+
+
+<div id="service_layer" class="service_layer"></div>
+
+	<div id="templates" style="display:none;">
+		<div id="image_preloader">
+			<img src="/gui/photobig_share_on.png?whp35" />
+			<img src="/gui/comment_ok_but.png?whp35" />
+			<img src="/gui/comment_cancell_but.png?whp35" />
+			
+			<img src="/gui/logout_off.png?whp35" />
+			<img src="/gui/login_key.png?whp35" />
+			<img src="/gui/notify_button.png?whp35" />
+			<img src="/gui/notify_button_tile.png?whp35" />
+			<img src="/gui/wraper_line.png?whp35" />
+			
+			<img src="/gui/photo_big_background.png?whp35" />
+	
+			<img src="/gui/photo_tb.png?whp35" />
+			<img src="/gui/photo_stile.png?whp35" />
+			
+			<img src="/gui/spinner.gif?whp35" />   
+			<img src="/gui/fast_comment_v.png?whp35" /> 
+			<img src="/gui/notify_v_big.png?whp35" /> 
+			<img src="/gui/loading_ani.gif?whp35" /> 
+			  
+			<img src="/gui/profile_no_ava.jpg?whp35" />
+			<img src="/gui/empty.png?whp35" />    
+			<img src="/gui/points_heart.png?whp35" /> 
+			<img src="/gui/notify_v_big_rc.png?whp35" />
+			
+			
+			<img src="/gui/line_fader_dot.png?whp35" />
+			<img src="/gui/line_fader.png?whp35" />
+			<img src="/gui/line_fader_small.png?whp35" />
+			<img src="/gui/loading_ani_s.gif?whp35" />
+			<img src="/gui/upload/fader.png" />
+
+			<img src="/gui/new/close_popup.png" />
+			<img src="/gui/new/close_popup_hover.png" />
+			<img src="/gui/new/medium_arrow_left.png" />
+			<img src="/gui/new/medium_arrow_left_hover.png" />
+			<img src="/gui/new/medium_arrow_right.png" />
+			<img src="/gui/new/medium_arrow_right_hover.png" />
+			<img src="/gui/new/small_arrow_right.png" />
+			<img src="/gui/new/small_arrow_right_hover.png" />
+
+			<img src="/gui/web_landing/jobs_counter.png" />
+		</div>
+		
+		<div id="user_follower_template" onselectstart="cancelEvent(event);" class="user_follower_template">
+											<a class="notifications_link" >
+												<div class="followers_cont">
+													<a class="followers_name" style="float:left;position:absolute;top:12px; left:0px; margin-left:18px;"></a>
+													<div class="unfollow_button" onselectstart="cancelEvent(event);" style="float:right; position:absolute;top:4px; right:16px;">
+														<div class="unfollow_button_left"></div><div class="unfollow_button_middle" style="width:82px;">
+															<div class="unfollow_button_label l10n_remove">Remove</div>
+														</div><div class="unfollow_button_right"></div>        
+													  </div>                                                         
+												</div>
+											</a>
+											<div class="notifications_wrapper" style="width:100%; position:absolute; bottom:0px; margin-bottom:0px;  margin-top:0px; padding:0px; left:0px;margin-left:0px; top:45px;"></div>
+										</div>
+
+
+'
+		<div id="user_followers_template" onselectstart="cancelEvent(event);" class="user_follower_template">
+			<a class="notifications_link" >
+				<div class="followers_cont">
+					<a class="followers_name" style="float:left;position:absolute;top:12px; left:0px;  margin-left:18px;"></a>
+
+
+					<div class="unfollow_button" onselectstart="cancelEvent(event);" style="float:right; position:absolute;top:4px; right:16px;">
+						<div class="unfollow_button_left"></div><div class="unfollow_button_middle" style="width:72px;">
+						<div class="unfollow_button_label l10n_remove">Remove</div>
+					</div><div class="unfollow_button_right"></div>
+					</div>
+
+					<div class="unfollowb_button" onselectstart="cancelEvent(event);" style="float:right; position:absolute;top:4px; right:118px;">
+						<div class="unfollow_button_left"></div><div class="unfollow_button_middle" style="width:72px;">
+						<div class="unfollow_button_label l10n_ok">Ok</div>
+					</div><div class="unfollow_button_right"></div>
+					</div>
+
+				</div>
+			</a>
+			<div class="notifications_wrapper" style="width:100%; position:absolute; bottom:0px; margin-bottom:0px; margin-top:0px; padding:0px; left:0px;margin-left:0px;top:45px;"></div>
+		</div>
+
+
+										
+		
+	   <div id="notifications_element_follow" onselectstart="cancelEvent(event);" class="notifications_element_follow">
+			<a class="notifications_link" >
+			<table width="100%" style="position:relative; top:-2px;">
+				<tr>
+					<td class="notifications_imagecontainer" width="0%"><img src="/gui/notifications_newface.png" class="notifications_image" style="border:0;margin-bottom:2px; margin-top:4px;" /></td>
+					<td class="notifications_textcontainer" width="100%">
+					<span class="notifications_time" ></span>
+					<a class="notifications_tittle" style="margin:0px;"></a>
+					<span class="notifications_tittle" style="color:#504f53;" id="l10n_now_subscribed">now subscribed to you</span></td>
+				</tr>
+			</table>
+			</a>
+			<div class="notifications_wrapper"></div>
+		</div>
+
+		<div id="notifications_element_reply" onselectstart="cancelEvent(event);" class="notifications_element_reply">
+			<a class="notifications_link" >
+				<table width="100%" style="position:relative; top:-2px;">
+					<tr>
+						<td class="notifications_imagecontainer" width="0%" valign="top"><img src="" class="notifications_image" /><div class="notifications_ico_comment"></div></td>
+						<td class="notifications_textcontainer_comment" width="100%" valign="middle">
+							<span class="notifications_time" ></span>
+							<div class="notifications_text"></div>
+							<div class="notifications_text"></div>
+						</td>
+					</tr>
+				</table>
+			</a>
+			<div class="notifications_wrapper"></div>
+		</div>
+
+		<div id="notifications_element_comment" onselectstart="cancelEvent(event);" class="notifications_element_comment">
+											<a class="notifications_link" >
+											<table width="100%" style="position:relative; top:-2px;">
+												<tr>
+													<td class="notifications_imagecontainer" width="0%" valign="top"><img src="" class="notifications_image" /><div class="notifications_ico_comment"></div></td>
+													<td class="notifications_textcontainer_comment" width="100%" valign="middle">
+														<span class="notifications_time" ></span>
+														<div class="notifications_text"></div>
+														<div class="notifications_text"></div>
+													</td>
+												</tr>
+											</table>
+											</a>
+											<div class="notifications_wrapper"></div>
+										</div>
+										
+		<div id="notifications_element_like" onselectstart="cancelEvent(event);" class="notifications_element_like">
+											<a class="notifications_link" >
+											<table width="100%" style="position:relative; top:-2px;">
+												<tr>
+													<td class="notifications_imagecontainer" width="0%"><img src="" class="notifications_image" /><div class="notifications_ico_like"></div></td>
+													<td class="notifications_textcontainer" width="100%">
+													<span class="notifications_time" ></span> 
+													<a class="notifications_tittle"></a>
+													<div class="notifications_text" id="l10n_liked_photo">liked your photo</div></td>
+												</tr>
+											</table>
+											</a>
+											<div class="notifications_wrapper"></div>
+										</div>
+
+
+
+
+
+										
+		
+		<div id="notifications_loading_tab" class="notifications_loading_tab"></div>
+		<table id="window_prot_nonotif" class="window_prot_nonotif"><tr><td align="center" valign="middle" id="l10n_no_notifications">No notifications</td></tr></table>
+		
+		<div id="template_story_elem" class="template_story_elem">
+										
+										<a class="feed_photo_link" >
+											<div class="story_img" style="background-image:url(/gui/loading_ani_s2.gif?whp35);">
+												<div class="story_new_ico" style="display:none;"></div>
+												<img class="template_story_elem_img" border="0" />
+												<div class="story_bk_fader">
+													<div class="story_label_small">Theme sd 2 as</div>
+													<div class="story_bottom_line"></div>
+												</div>
+
+											</div>
+										</a>
+									</div>
+	   
+		<div id="template_daily_elem" class="template_userstory_elem">
+										<div class="feed_heart_container" style="height:0px; bottom:0px; position:absolute;display:none;">
+											<div class="feed_heart_bit"></div>
+										</div>
+										<a class="feed_photo_link" >
+											<div class="story_img" style="background-image:url(/gui/loading_ani_s2.gif?whp35); width:320px;">
+												<div class="story_new_ico"></div>
+												<img class="template_story_elem_img" border="0" />
+												<div class="story_bk_fader" style="width:320px;">
+													<div class="story_label_small" ></div>
+													<div class="story_total_small" ></div>
+													<div class="story_bottom_line"></div>
+												</div>
+											</div>
+										</a>
+									</div>
+									
+		
+		<div id="feed_empty_template">
+			<div class='feed_empty_template'></div>
+			<br/><br/><br/>
+		</div>
+		
+		
+		<div id="feed_empty_template_medium">
+			<div class='feed_empty_template_medium'></div>
+			<br/><br/><br/>
+		</div>
+
+		<div id="feed_empty_template_small">
+			<div class='feed_empty_template_small'></div>
+			<br/><br/><br/>
+		</div>
+		
+		<div id="rolloutstory_line" class="stories_line">
+				  <div class="stories_line_cont">
+				  </div>
+				  
+				  <div class="story_line_rollover_place_container">
+					  <div class="story_line_rollover_place">
+							<div class="story_line_rollover_place_tile_top"></div>
+							<div class="story_line_rollover_place_tile_bottom"></div>
+							<div class="story_line_rollover_place_cont">
+							 
+							</div>
+							
+					  </div>  
+					  <div class="story_line_top_v"></div>     
+				  </div>   
+				</div>     
+				
+		
+		<div id="rolloutstory_page" class="page_template_story">
+							<div class="page_template_header">
+							</div>
+							<div class="page_template_container">
+							</div>
+					  </div>
+					  
+		 <div id="rolloutstory_pageimage" class="img_template_like_160" onselectstart="cancelEvent(event);">
+							<a class="timeline_a_ava_holder" style="position: static;" >
+								<div class="img_template_like_160_img_cont" >
+									<img class="img_template_like_160_img" />
+									<div class="img_template_like_160_img_fader"></div>
+								</div>
+								<div class="img_template_like_160_img_like" >
+									<div class="feedgrid_heart_0" ></div>
+									<span class="feedgrid_hearts_lcd" ></span>
+								</div>
+							</a>
+						  </div>
+						  
+		 <div id="rolloutstory_headstory" class="profile_stories_elem">
+				 <div class="profile_stories_elem_header">
+					<div class="profile_stories_elem_header_tittle">Home</div>
+					<div class="profile_stories_elem_header_desc">Description 20sd ewfce</div>
+				 </div>
+				 <div id="imgcollage_template_like_212" class="imgcollage_template_like_212" onselectstart="cancelEvent(event);">
+					<div class="imgcollage_template_like_212_img_cont" onselectstart="cancelEvent(event);">
+						<img class="imgcollage_template_like_212_img" onselectstart="cancelEvent(event);" />
+					</div>
+				 </div>
+			 </div>
+			 
+		<div id="rolloutstory_template">
+			<div class="rolloutstory_container"></div>
+		</div>
+		
+		
+		<div id="feed_pageimage" class="img_template_like_212" onselectstart="cancelEvent(event);">
+							<a class="timeline_a_ava_holder" >
+								<div class="img_template_like_212_img_cont" >
+									<img class="img_template_like_212_img" />
+								</div>
+								<div class="img_template_like_212_img_like" >
+									<div class="img_template_like_212_img_label" ></div>
+								</div>
+							</a>
+						  </div>
+						  
+						  
+		
+		<li class="timeline_template_story" id="timeline_template_story">
+			<div class="timeline_template_header">
+				<div class="timeline_header_avatar">
+					<div class="timeline_header_avatar_shadow"></div>
+					<a><img class="timeline_header_avatar_img" /></a>
+				</div>
+				<div class="timeline_header_text_cont"></div>
+			</div>
+			<div class="timeline_template_storybody">
+				<a class="timeline_a_image_holder"><img class="timeline_template_story_img" /></a>
+			</div>
+			
+			<div class="timeline_ico_sider">
+				<div class="timeline_linefader"></div>
+				<div class="timeline_v_plate"></div>
+				<div class="timeline_mainico"></div>
+				<div class="timeline_timeshtamp"></div>
+			</div>          
+		  </li>
+		  
+		  
+		  <div id="timeline_template_like_elem" class="timeline_template_like_elem">
+				<a class="timeline_a_ava_holder">
+				<div class="timeline_template_like_img_cont">
+					<img class="timeline_like_img" />
+				</div>
+				</a>
+			  </div>
+			  
+		  <div id="timeline_template_follow_elem" class="timeline_template_follow_elem">
+				<div class="timeline_template_follow_ava_shadow"></div>
+				
+					<div class="timeline_template_follow_ava_cont">
+						 <a class="timeline_a_ava_holder"><img class="timeline_template_follow_ava" /></a>
+					</div>
+					<div class="timeline_template_follow_label"></div>
+		  </div>
+
+
+			  
+		  
+		  
+			  
+		  <li class="timeline_template_like" id="timeline_template_like">
+			<div class="timeline_template_header">
+				<div class="timeline_header_avatar">
+					<div class="timeline_header_avatar_shadow"></div>
+					<a class="timeline_a_ava_holder"><img class="timeline_header_avatar_img" /></a>
+				</div>
+				<div class="timeline_header_text_cont">like</div>
+			</div>
+			
+			<div class="timeline_template_likebody">
+				<div class="timeline_template_like_canvas"></div>
+			</div>
+			
+			<div class="timeline_elem_pagin_l" onselectstart="cancelEvent(event);"></div>
+			<div class="timeline_elem_pagin_r" onselectstart="cancelEvent(event);"></div>
+			
+			<div class="timeline_elem_pagin_ind" onselectstart="cancelEvent(event);">
+				<div class="timeline_elem_pagin_ind_label"></div>
+			</div>
+			
+			<div class="timeline_ico_sider">
+				<div class="timeline_linefader"></div>
+				<div class="timeline_v_plate"></div>
+				<div class="timeline_mainico"></div>
+				<div class="timeline_timeshtamp"></div>
+			</div>   
+		  </li>
+		  
+		  
+		  
+		  <li class="timeline_template_follow" id="timeline_template_follow">
+			<div class="timeline_template_header">
+				<div class="timeline_header_avatar">
+					<div class="timeline_header_avatar_shadow"></div>
+					<a class="timeline_a_ava_holder"><img class="timeline_header_avatar_img" /></a>
+				</div>
+				<div class="timeline_header_text_cont">follow</div>
+			</div>
+			
+			<div class="timeline_template_followbody">
+				<div class="timeline_template_follow_canvas"></div>
+			</div>
+			
+			<div class="timeline_elem_pagin_l" onselectstart="cancelEvent(event);"></div>
+			<div class="timeline_elem_pagin_r" onselectstart="cancelEvent(event);"></div>
+			
+			<div class="timeline_elem_pagin_ind" onselectstart="cancelEvent(event);">
+				<div class="timeline_elem_pagin_ind_label"></div>
+			</div>
+			
+			<div class="timeline_ico_sider">
+				<div class="timeline_linefader"></div>
+				<div class="timeline_v_plate"></div>
+				<div class="timeline_mainico"></div>
+				<div class="timeline_timeshtamp"></div>
+			</div>   
+		  </li>
+				  
+				  
+		  <li class="timeline_template_photo" id="timeline_template_photo">
+			<div class="timeline_template_header">
+				<div class="timeline_header_avatar">
+					<div class="timeline_header_avatar_shadow"></div>
+					<a class="timeline_a_ava_holder">
+						<img class="timeline_header_avatar_img" /></a>
+
+				</div>
+				<div class="timeline_header_text_cont"></div>
+			</div>
+			<div class="timeline_template_photobody">
+				<a class="timeline_a_image_holder"><img class="timeline_template_photo_img" /></a>
+				<div class="timeline_caption">
+					<div class="timeline_caption_text"></div>
+				</div>
+			</div>
+			
+			<div class="timeline_ico_sider">
+				<div class="timeline_linefader"></div>
+				<div class="timeline_v_plate"></div>
+				<div class="timeline_mainico"></div>
+				<div class="timeline_timeshtamp"></div>
+			</div>   
+			
+			<div class="timeline_comments_ico" onselectstart="cancelEvent(event);">  
+				<div class="timeline_comments_label"></div>  
+			</div>     
+			
+			<div class="timeline_likes_ico_0" onselectstart="cancelEvent(event);">  
+				<div class="timeline_likes_label"></div>  
+			</div>   
+		  </li>
+
+		  
+		  <li id="timeline_template_lastvisit" class="timeline_template_lastvisit" >
+				<div class="timeline_lastvisit_label"></div>
+				<div class="timeline_linefader" style="left:427px;"></div>
+		   </li>
+		   
+		 <li id="timeline_template_new_notif" class="timeline_template_new_notif" >
+					  <div class="events_n_container">
+						<div class="events_n_left"></div><div class="events_n_middle"><div class="events_number_cont"></div></div><div class="events_n_right"></div>
+					  </div>
+					  <div class="events_text_container"></div>
+		 </li>
+				  
+				  
+		 
+		 
+		 <div class="timeline_page_template" id="timeline_page_template">
+			<ul class="timeline_page_cont"></ul>
+			<div style="clear:both;"></div>
+		 </div>
+		 
+		 
+		 
+	 
+		   
+		 <div id="timeline_template" class="blocks_canvas" onselectstart="cancelEvent(event);">
+			  <div class="timeline_linefader" style="left:427px; top:-15px;"></div>
+			  <div class="timeline_main_container"></div>
+			  <div class="timeline_clocks"></div>
+			  <div class="timeline_join">
+				<div class="timeline_joined_template">
+					<div style="position:relative; left:-15px;">
+						<div class="timeline_joined_template_v"></div>
+					</div>
+					<span class="timeline_joined_template_label"></span>
+				</div>
+			  </div>
+			  <div style="clear:both;"></div>
+		  </div>
+		  
+		  
+		  
+		  <div id="story_menu_li" class="profile_menu_li" >
+			<div class="profile_menu_li_ico"></div>
+			<div class="profile_menu_li_text"></div>
+		  </div>
+							  
+							  
+							  
+		
+		
+		<div id="stories">    
+			<div class="stories_head">
+				<div class="stories_icons_cont"></div>
+				<div class="line_wrapper" style="position:absolute; bottom:0px;"></div>
+				<div class="stories_head_v"></div>
+			</div>
+			<div class="notifications_loading_tab"></div>
+			<div class="stories_content"></div>
+			<div class="dailystories_content"></div>
+		</div>
+		
+		
+		<div id="dailystories">
+						<div style="width:681px; margin:auto;">
+							<div class="userstories" style="padding:6px;">
+								<div class="story_canvas" style="padding:0px; text-align:left;">
+								</div> 
+								<table class="paging_table" style="width:661px;"><tr>
+									<td align="left">
+									<br/><div class="std_paging_left" onselectstart="cancelEvent(event);"></div></td>
+									<td align="right">
+									<br/><div class="std_paging_right" onselectstart="cancelEvent(event);"></div></td>
+								</tr></table>
+							</div>
+							<div class="story_shadow"></div>
+						</div>
+	   </div>
+		
+		<div id="subscribers_template" >
+			<div class="feed_name"></div>
+			<div class="subscribers_content_box"></div>
+		</div>
+		
+		
+		
+		<div id="404">
+
+
+			<table class="error_holder" width="100%" height="100%">
+				<tr>
+					<td valign="middle" align="center">
+						<img class="failman1"  src="/gui/failman.png?whp35" width="356" height="415" />
+						<br/><br/></td>
+
+				</tr>
+			</table>
+		</div>
+		
+		<div id="popular">
+			<div class="feed_name"><span class="l10n_popular">Popular</span></div>
+			<div class="popular_photo_box"></div>            
+		</div>
+
+		<div id="whp">
+		</div>
+
+
+
+
+		<div id="getstarted">
+			<div class="feed_name">Get started</div>
+			<div class="getstarted_box">
+				<div class="form_error_message" style="margin-top:28px; margin-bottom: 24px; height:20px;">
+				</div>
+				<div class="form_input_area">
+					<input autocomplete="off" name="email" placeholder="E-mail" type="text" maxlength="32" class="form_input_field" />
+				</div>
+				<div class="form_input_area" style="margin-top:20px;">
+					<input autocomplete="off" name="password" placeholder="Password" type="password" maxlength="16" class="form_input_field" />
+				</div>
+				<div onselectstart="cancelEvent(event);" class="form_confirm_button" style="float:right; margin-top: 36px;">
+					<span class="l10n_create_account">Create account</span>&nbsp;<div class="arrow_right" style="position: relative; top:19px;"></div>
+				</div>
+				<div style="clear:both"></div>
+			</div>
+		</div>
+
+
+		<div id="confirmation">
+			<div class="feed_name" id="l10n_confirmation">Confirmation</div>
+
+
+			<div class="getstarted_box" style="width:800px;">
+				<div class="form_error_message" style="margin-top:28px; margin-bottom: 24px; height:20px;"></div>
+				<div class="form_input_area" style="margin-top:26px; border:0;">
+					<span class="form_input_field" id="l10n_we_send_you_link">We have sent you e-mail with confirmation link. Please confirm.</span>
+				</div>
+				<div onselectstart="cancelEvent(event);" class="form_confirm_button" style="margin-top: 10px;">
+					<span class="l10n_resend">Resend</span>&nbsp;<div class="arrow_right" style="position: relative; top:19px;"></div>
+				</div>
+				<div style="clear:both"></div>
+			</div>
+
+		</div>
+
+
+
+
+
+		<div id="findfriends" style="width:996px;">
+			<div class="feed_name" id="l10n_connect_with_friends">Connect with friends</div>
+			<div class="getstarted_box">
+				<div class="form_error_message" style="margin-top:28px; margin-bottom: 24px; height:20px;">
+				</div>
+				<div style="margin-top:46px; margin-bottom:59px;">
+					 <div class="social_link_fb_0"></div>&nbsp;
+					 <div class="social_link_tw_0"></div>
+				</div>
+				<div class="findfriends_texts">
+					<img src="/gui/dot_pic.png" class="dot_img" /><span class="header_autoscan">Auto-scan who of your friends joined</span><br/>
+					<img src="/gui/dot_pic.png" class="dot_img" /><span class="header_instant">Instantly find friends who are already here </span><br/>
+					<img src="/gui/dot_pic.png" class="dot_img" /><span class="header_faster">Faster sharing and sign in </span><br/>
+				</div>
+			</div>
+
+			<div onselectstart="cancelEvent(event);" class="form_confirm_button" style=" margin-top: 36px;margin-left:auto;margin-right: auto;">
+				<span class="l10n_proceed">Proceed</span>&nbsp;<div class="arrow_right" style="position: relative; top:19px;"></div>
+			</div>
+			<div style="clear:both"></div>
+
+		</div>
+
+		<div id="reset">
+			<div class="feed_name">Reset password</div>
+
+			<div class="getstarted_box">
+				<div class="form_error_message" style="margin-top:28px; margin-bottom: 24px; height:20px;"></div>
+
+				<div class="type">
+					<div class="form_input_area">
+						<input autocomplete="off" name="email" placeholder="Enter e-mail you used for registration" type="text" maxlength="32" class="form_input_field" />
+					</div>
+
+					<div onselectstart="cancelEvent(event);" class="form_confirm_button" style="float:right; margin-top: 36px;">
+						Reset&nbsp;<div class="arrow_right" style="position: relative; top:19px;"></div>
+					</div>
+					<div style="clear:both"></div>
+				</div>
+
+
+				<div class="type">
+					<div class="form_input_area" style="margin-top:22px; border:0;">
+						<span class="form_input_field">Password was sent to your e-mail.</span>
+					</div>
+					<div style="clear:both"></div>
+				</div>
+
+
+
+			</div>
+		</div>
+
+
+
+
+		<div id="setpassword">
+			<div class="feed_name">Set password</div>
+
+			<div class="getstarted_box">
+				<div class="form_error_message" style="margin-top:28px; margin-bottom: 24px; height:20px;"></div>
+
+				<div class="type">
+					<div class="form_input_area">
+						<input autocomplete="off" name="password" placeholder="New password" type="password" maxlength="16" class="form_input_field" />
+					</div>
+
+					<div onselectstart="cancelEvent(event);" class="form_confirm_button" style="float:right; margin-top: 36px;">
+						Set&nbsp;<div class="arrow_right" style="position: relative; top:19px;"></div>
+					</div>
+					<div style="clear:both"></div>
+				</div>
+
+
+				<div class="type">
+					<div class="form_input_area" style="margin-top:22px; border:0;">
+						<span class="form_input_field">Password was changed.</span>
+					</div>
+					<div style="clear:both"></div>
+				</div>
+
+
+
+			</div>
+		</div>
+
+		
+		<div id="timeline">
+			<div class="timeline_box"></div>            
+		</div>
+		
+		<div id="story">
+			<div class="feed_name2"><span class="feed_name4"></span><img src="/gui/arrow.jpg" width="14" height="14" class="story_arr" /><span class="feed_name8"></span></div>
+
+			<div class="popular_photo_box"></div>
+		</div>
+		
+		<div id="notifications_template" class="window_prot" style="display:none;" >
+				<div class="window_prot_box_arrow"></div>
+				<div class="window_prot_container" style="z-index:100;">
+					<div class="window_prot_canvas"> 
+					</div>         
+					<div class="scrolling_container" style="display:none;">
+						<div class="scrolling_bar" >
+						</div>
+					</div> 
+				</div>
+			</div>
+
+
+		<div id="newfaces_slider_cont" class="newfaces_slider_cont">
+
+			<a class="timeline_a_ava_holder"><img class="timeline_header_avatar_img" style="border-radius: 6px;" /></a>
+			<span class="newfaces_text">Hello my friend</span>
+
+
+			<div class="profile_button_newfaces" onselectstart="cancelEvent(event);" style="float:right; position:relative;top:2px; right:16px; margin-right:10px;">
+				<div class="profile_button_newfaces_left"></div><div class="profile_button_newfaces_middle" style="width:82px;">
+				<div class="profile_button_newfaces_label">Close</div>
+			</div><div class="profile_button_newfaces_right"></div>
+			</div>
+
+			<div class="profile_button_newfaces" onselectstart="cancelEvent(event);" style="float:right; position:relative;top:2px; right:16px; margin-right: 10px;">
+				<div class="profile_button_newfaces_left"></div><div class="profile_button_newfaces_middle" style="width:82px;">
+				<div class="profile_button_newfaces_label">View all</div>
+			</div><div class="profile_button_newfaces_right"></div>
+			</div>
+
+
+		</div>
+		
+		  <div id="feed_template">
+			<div class="feed_photo_box"></div>
+			<div class="feed_paging"> <br/>
+			  <table class="paging_table">
+				<tr>
+				  <td align="left" style="width:218px;"><div class="std_paging_left" onselectstart="cancelEvent(event);"></div></td>
+				  <td align="center" style="width:364px;"><a class="feed_story_back"></a></td>
+				  <td align="right" style="width:218px;"><div class="std_paging_right" onselectstart="cancelEvent(event);"></div></td>
+				</tr>
+			  </table>
+			  <br/>
+			  <br/>
+			</div>
+		  </div>
+		  
+		  
+		<div id="test">
+		
+			<div class="test_photo_box"></div>
+			
+		</div>
+
+		<div id="settings">
+			<div class="feed_name">Settings</div>
+			<div class="settings_box">
+				<div class="settings_line" onselectstart="cancelEvent(event);">
+					<span class="settings_label">Add WeHeartPics to Facebook Timeline</span>
+					<div class="settings_switcher_0" style="float:right;"></div>
+				</div>
+
+				<table style="width:672px; margin-top: 57px;" cellpadding="0" cellspacing="0">
+					<tr>
+						<td class="settings_1r"></td>
+						<td class="settings_2r" style=" line-height: 10px;width: 652px" align="left">
+							<span class="settings_desc">Social</span>
+						</td>
+						<td class="settings_3r"></td>
+					</tr>
+					<tr>
+						<td class="settings_4r"></td>
+						<td class="settings_5r"  style="width: 652px">
+
+							<div class="settings_line" onselectstart="cancelEvent(event);" style="margin-top: 15px;">
+								<span class="settings_label">Link to Facebook</span>
+								<div class="settings_switcher_0" style="float:right;"></div>
+							</div>
+
+							<div class="settings_line" onselectstart="cancelEvent(event);" style="margin-top: 30px; margin-bottom: 15px;">
+								<span class="settings_label">Link to Twitter</span>
+								<div class="settings_switcher_0" style="float:right;"></div>
+							</div>
+
+							<div class="settings_line" onselectstart="cancelEvent(event);" style="margin-top: 30px; margin-bottom: 15px;">
+								<span class="settings_label">Link to VKontakte</span>
+								<div class="settings_switcher_0" style="float:right;"></div>
+							</div>
+
+						</td>
+						<td class="settings_6r"></td>
+					</tr>
+					<tr>
+						<td class="settings_7r"></td>
+						<td class="settings_8r"  style="width: 652px"></td>
+						<td class="settings_9r"></td>
+					</tr>
+				</table>
+
+
+				<table style="width:672px; margin-top: 57px;" cellpadding="0" cellspacing="0">
+					<tr>
+						<td class="settings_1r"></td>
+						<td class="settings_2r" style=" line-height: 10px;" align="left">
+							<span class="settings_desc" id="l10n_account">Account</span>
+						</td>
+						<td class="settings_3r"></td>
+					</tr>
+					<tr>
+						<td class="settings_4r"></td>
+						<td class="settings_5r"  style="width: 652px">
+
+							<div class="settings_line" onselectstart="cancelEvent(event);" style="margin-top: 15px;">
+								<span class="settings_label">Mail</span>
+								<div class="settings_change" style="float:right;">Change</div>
+							</div>
+
+							<div class="settings_line" onselectstart="cancelEvent(event);" style="margin-top: 30px; margin-bottom: 15px;">
+								<span class="settings_label">Password</span>
+								<div class="settings_change" style="float:right;">Change</div>
+							</div>
+
+						</td>
+						<td class="settings_6r"></td>
+					</tr>
+					<tr>
+						<td class="settings_7r"></td>
+						<td class="settings_8r"  style="width: 652px"></td>
+						<td class="settings_9r"></td>
+					</tr>
+				</table>
+
+
+				<table style="width:672px; margin-top: 57px;" cellpadding="0" cellspacing="0">
+					<tr>
+						<td class="settings_1r"></td>
+						<td class="settings_2r" style=" line-height: 10px;" align="left">
+							<span class="settings_desc">Account</span>
+						</td>
+						<td class="settings_3r"></td>
+					</tr>
+					<tr>
+						<td class="settings_4r"></td>
+						<td class="settings_5r"  style="width: 652px">
+
+							<div class="settings_line" onselectstart="cancelEvent(event);" style="margin-top: 15px;margin-bottom: 15px;">
+								<span class="settings_label">No e-mail and password</span>
+								<div class="settings_change" style="float:right;">Set</div>
+							</div>
+
+						</td>
+						<td class="settings_6r"></td>
+					</tr>
+					<tr>
+						<td class="settings_7r"></td>
+						<td class="settings_8r"  style="width: 652px"></td>
+						<td class="settings_9r"></td>
+					</tr>
+				</table>
+
+			</div>
+		</div>
+		
+		
+					<div id="profile" class="profile">
+						<div class="profile_head">
+						<div class="profile_background_cont">
+							<img class="profile_background_img" onselectstart="cancelEvent(event);" />
+						</div>
+
+						<div class="profile_bk_buttons">
+							<div class="profile_bk_move_control">
+								<div class="profile_bk_move" onselectstart="cancelEvent(event);"></div>
+							</div>
+							<div class="profile_bk_move_control_active">
+								<div class="profile_bk_ok" onselectstart="cancelEvent(event);"></div>
+								<div class="profile_bk_cancel" onselectstart="cancelEvent(event);"></div>
+							</div>
+						</div>
+
+						<div class="profile_bk_loading" onselectstart="cancelEvent(event);">
+							<div class="profile_loading">Loading</div>
+						</div>
+
+						<div class="profile_bk_move2" onselectstart="cancelEvent(event);">
+							<div class="profile_moving">Move to change position of the cover</div>
+						</div>
+
+						<div class="photobig_slider" style="width: 991px;">
+						</div>
+
+
+						<div class="profile_left_plate">
+							<div style="height:14px; line-height:0px; font-size:0px;"></div>
+							
+							<div class="profile_sub_timeline_0"></div>
+							<div class="profile_sub_stories_0"></div>
+							<div class="profile_sub_private_0"></div>
+						</div>
+						<div class="profile_ava_cont">
+							<div class="profile_avatar_shadow"></div>
+							<div class="profile_avatar_image_cont"></div>
+						</div>
+						<div class="profile_name_cont">
+							<span class="profile_name_label"></span><div class="edit_name_ico" style="margin-left:10px;"></div>
+						</div>
+						
+						<div class="profile_plates_cont">
+							<div class="profile_black_plate2">
+								<div class="profile_followings_label"><span class="profile_n_label">12 followings</span></div>
+							</div>
+							<div class="profile_black_plate2">
+								<div class="profile_followers_label"><span class="profile_n_label">12 followers</span></div>
+							</div>
+							<div class="profile_black_plate">
+								<div class="profile_points_label">
+									<span class="profile_n_label">12 points</span>
+									
+									<div style="position:relative;">
+										<div class="points_window" style="display:none; height:auto; width: 350px;padding: 12px; height:182px;">
+											<div class="notifications_window_box_arrow" style="left:175px;"></div>
+											<div class="notifications_window_container" style="z-index:100;">
+												<div class="notifications_window_canvas">                               
+													
+													<div class="user_points_template" >
+														<div class="followers_cont" style="text-align:center; background-color:#f0f0f0; height:35px;">
+															<span class="user_points_name" style="font-weight:bold;">Basic actions</span>
+															<div class="notifications_wrapper" style="position:absolute; bottom:-36px; width:350px; margin-left:0px"></div>
+														</div>
+													 </div>
+													 <div class="user_points_template" >
+														<div class="followers_cont" style="height:35px;">
+															<span class="user_points_name" style="float:left;position:relative;margin-left:8px;">Got like</span>
+															<div class="points_heart_ico" style="float:right; position:relative; top:6px;margin-right:8px;"></div>
+															<span class="user_points_name" style="float:right;position:relative;" >+1</span>
+															<div class="notifications_wrapper" style="position:absolute; bottom:-36px; width:350px; margin-left:0px"></div>
+														</div>
+													 </div>
+													 <div class="user_points_template" >
+														<div class="followers_cont" style="height:35px;">
+															<span class="user_points_name" style="float:left;position:relative;margin-left:8px;">Share photo</span>
+															<div class="points_heart_ico" style="float:right; position:relative; top:6px;margin-right:8px;"></div>
+															<span class="user_points_name" style="float:right;position:relative; " >+2</span>
+															<div class="notifications_wrapper" style="position:absolute; bottom:-36px; width:350px; margin-left:0px"></div>
+														</div>
+													 </div>
+													 <div class="user_points_template" >
+														<div class="followers_cont" style="text-align:center; background-color:#f0f0f0; height:35px;">
+															<span class="user_points_name" style="font-weight:bold;">Extra actions</span>
+															<div class="notifications_wrapper" style="position:absolute; bottom:-36px; width:350px; margin-left:0px"></div>
+														</div>
+													 </div>
+													<div class="user_points_template" >
+														<div class="followers_cont" style="height:35px;">
+															<span class="user_points_name" style="float:left;position:relative;margin-left:8px;">New story</span>
+															<div class="points_heart_ico" style="float:right; position:relative; top:6px;margin-right:8px;"></div>
+															<span class="user_points_name" style="float:right;position:relative;" >-50</span>
+															<div class="notifications_wrapper" style="position:absolute; bottom:-36px; width:350px; margin-left:0px"></div>
+														</div>
+													 </div>
+												</div>  
+											</div> 
+										</div>
+									</div>
+									
+								</div>
+							</div>
+						</div>
+					</div>
+					 <div style="height:80px;"></div>
+					 <div class="timeline_box" style="padding-top:48px;"></div>         
+					 <div class="rolloutstory_box" ></div>    
+					 <div class="subscribers_box" ></div>
+					 <div class="subscriptions_box" ></div> 
+					 <div class="private_box" ></div> 
+					</div>
+					
+					
+				  
+					
+				  <div id="img_template_like_160" class="img_template_like_160" onselectstart="cancelEvent(event);">
+					<a class="timeline_a_ava_holder" onselectstart="cancelEvent(event);">
+						<div class="img_template_like_160_img_cont" onselectstart="cancelEvent(event);">
+							<img class="img_template_like_160_img" onselectstart="cancelEvent(event);" />
+						</div>
+						<div class="img_template_like_160_img_like" onselectstart="cancelEvent(event);">
+							<div class="img_template_like_160_img_label" onselectstart="cancelEvent(event);"></div>
+						</div>
+					</a>
+				  </div>
+		
+				  <!--<div id="download_standart" class="download_wind">
+						<a href="http://bit.ly/z22Qhu" target="_blank" class="download_directlink">
+							<div class="download_ico" style="float:left;margin-bottom:28px;"></div>
+							<div class="download_label1" style="float: right; top: 15px;"></div>
+						</a>
+						<div class="notifications_wrapper" style="margin:0px; width:284px;clear:both;"><</div>
+
+						<div class="check_container" style="margin-top:10px;"><div class="gui_checkmark_0"></div><span class="check_label">Don’t show anymore</span></div>
+				  </div>
+
+
+					<div id="download_new" class="download_wind" style="padding-top:13px" >
+						<div class="download_label3" style="margin:auto; margin-bottom:13px;"></div>
+						<div class="notifications_wrapper" style="margin:0px; width:284px;clear:both;"><</div>
+						<div style="width:200px; margin:auto;margin-top:21px;">
+							<a href="http://bit.ly/z22Qhu" target="_blank" class="download_directlink">
+								<div class="download_ico" style="float:left;margin-bottom:28px;"></div>
+								<div class="download_label2" style="float: right; top: 15px;"></div>
+							</a>
+						</div>
+						<div class="notifications_wrapper" style="margin:0px; width:284px;clear:both;"><</div>
+						<div class="download_label4" style="margin:auto;margin-top:22px; margin-bottom:22px;"></div>
+						<div class="download_changelog_container"></div>
+
+
+					</div>-->
+
+		
+				   <div id="user" class="user">
+					<div class="profile_head">
+						<div class="profile_background_cont">
+							<img class="profile_background_img" />
+						</div>
+						<div class="profile_left_plate">
+							<div style="height:14px; line-height:0px; font-size:0px;"></div>
+							
+							<div class="profile_sub_timeline_0"></div>
+							<div class="profile_sub_stories_0"></div>
+						</div>
+						<div class="profile_ava_cont">
+							<div class="profile_avatar_shadow"></div>
+							<div class="profile_avatar_image_cont"></div>
+						</div>
+						<div class="profile_name_cont">
+							<span class="profile_name_label"></span>
+							<div class="control_button" onselectstart="cancelEvent(event);" style="top:14px; margin-left:14px;">  
+														<div class="control_button_left"></div><div class="control_button_middle" style="width:81px;">
+															<div class="control_button_label">follow</div>
+														</div><div class="control_button_right"></div>        
+													  </div>   
+						</div>
+						
+						<div class="profile_plates_cont">
+							<div class="profile_black_plate2">
+								<div class="profile_followings_label"><span class="profile_n_label">12 followings</span></div>
+							</div>
+							<div class="profile_black_plate2">
+								<div class="profile_followers_label"><span class="profile_n_label">12 followers</span></div>
+							</div>
+							<div class="profile_black_plate">
+								<div class="profile_points_label">
+									<span class="profile_n_label">12 points</span>
+									
+									<div style="position:relative;">
+										<div class="points_window" style="display:none; height:auto; width: 350px;padding: 12px; height:182px;">
+											<div class="notifications_window_box_arrow" style="left:175px;"></div>
+											<div class="notifications_window_container" style="z-index:100;">
+												<div class="notifications_window_canvas">
+
+													<div class="user_points_template" >
+														<div class="followers_cont" style="text-align:center; background-color:#f0f0f0; height:35px;">
+															<span class="user_points_name" style="font-weight:bold;">Basic actions</span>
+															<div class="notifications_wrapper" style="position:absolute; bottom:-36px; width:350px; margin-left:0px"></div>
+														</div>
+													 </div>
+													 <div class="user_points_template" >
+														<div class="followers_cont" style="height:35px;">
+															<span class="user_points_name" style="float:left;position:relative;margin-left:8px;">Got like</span>
+															<div class="points_heart_ico" style="float:right; position:relative; top:6px;margin-right:8px;"></div>
+															<span class="user_points_name" style="float:right;position:relative;" >+1</span>
+															<div class="notifications_wrapper" style="position:absolute; bottom:-36px; width:350px; margin-left:0px"></div>
+														</div>
+													 </div>
+													 <div class="user_points_template" >
+														<div class="followers_cont" style="height:35px;">
+															<span class="user_points_name" style="float:left;position:relative;margin-left:8px;">Share photo</span>
+															<div class="points_heart_ico" style="float:right; position:relative; top:6px;margin-right:8px;"></div>
+															<span class="user_points_name" style="float:right;position:relative; " >+2</span>
+															<div class="notifications_wrapper" style="position:absolute; bottom:-36px; width:350px; margin-left:0px"></div>
+														</div>
+													 </div>
+													 <div class="user_points_template" >
+														<div class="followers_cont" style="text-align:center; background-color:#f0f0f0; height:35px;">
+															<span class="user_points_name" style="font-weight:bold;">Extra actions</span>
+															<div class="notifications_wrapper" style="position:absolute; bottom:-36px; width:350px; margin-left:0px"></div>
+														</div>
+													 </div>
+													<div class="user_points_template" >
+														<div class="followers_cont" style="height:35px;">
+															<span class="user_points_name" style="float:left;position:relative;margin-left:8px;">New story</span>
+															<div class="points_heart_ico" style="float:right; position:relative; top:6px;margin-right:8px;"></div>
+															<span class="user_points_name" style="float:right;position:relative;" >-50</span>
+															<div class="notifications_wrapper" style="position:absolute; bottom:-36px; width:350px; margin-left:0px"></div>
+														</div>
+													 </div>
+												</div>  
+											</div> 
+										</div>
+									</div>
+									
+								</div>
+							</div>
+						</div>
+					</div>
+					 <div style="height:80px;"></div>
+					 <div class="timeline_box" style="padding-top:48px;"></div>         
+					 <div class="rolloutstory_box" ></div>    
+					 <div class="subscribers_box" ></div>
+					 <div class="subscriptions_box" ></div>                               
+				   </div>
+					
+					
+					<div id="template_story" >
+							<div class="story_back">
+									<div class="story_hitarea" onselectstart="cancelEvent(event);">
+										<div class="story_label" style="margin-left:23px; margin-top:19px; float:left; margin-bottom:6px;" id="l10n_title">Title</div>
+
+										<div class="story_heart_container">
+											<img class="story_big_image" />
+											<div class="story_new_ico"></div>
+										</div>
+
+										<div class="story_roll_but" ></div>
+									</div>
+									<div class="story_canvas"></div>          
+							</div>
+							<div class="story_shadow"></div>
+							<br/><br/>
+						</div>
+
+
+		<div id="timeline_empty_template" class="timeline_empty_template" style="width:700px; margin:auto;">
+			<div title="iPhone picture" style="float:right;">
+				<img src="/gui/empty_timeline_iphone.png" width="316" height="623"/>
+			</div>
+			<div style="float:left;width: 360px;text-align: left;margin-top:126px;">
+				<span style="font-weight:bold;font-family: Helvetica, Arial, Tahoma; font-size: 48px; color:#00a6eb; line-height: 42px;" id="tl_download_app">Download <br/>application</span><br/><br/>
+				<span style="font-family: Helvetica, Arial, Tahoma; font-size: 30px; color:#7f7f7f; font-weight: lighter;" id="tl_if_you_want">if you want to post photos<br/>and invite friends!</span>
+				<br /><br />
+				<a href="https://itunes.apple.com/us/app/we-heart-pics/id488515478" target="_blank"><img src="/gui/web_landing/app_store.png" alt="App Store" /></a><br /><br />
+				<a href="https://play.google.com/store/apps/details?id=com.weheartpics" target="_blank"><img src="/gui/web_landing/google_play.png" alt="Google Play" /></a>
+			</div>
+			<div style="clear: both"></div>
+		</div>
+
+		<div id="landing_page" class="landing_page">
+			<div id="landing-text" class="landing-text">
+				<div class="landing-text-top">
+					<div class="text-scrollable">
+						<span id="promo-text-1-top" class="landing-text-header">Hundreds of new ideas</span>
+						<span id="promo-text-2-top" class="landing-text-header">Organize moments</span>
+						<span id="promo-text-3-top" class="landing-text-header">Be closer to your friends</span>
+					</div>
+				</div>
+
+				<div class="landing-text-top-red">
+					<div class="text-scrollable">
+						<span id="promo-text-1-top-red" class="landing-text-header">Hundreds of new ideas</span>
+						<span id="promo-text-2-top-red" class="landing-text-header">Organize moments</span>
+						<span id="promo-text-3-top-red" class="landing-text-header">Be closer to your friends</span>
+					</div>
+				</div>
+
+				<span id="promo-descr-1" class="landing-text-description">We Heart Pics is a service with an endless <br />number of great ideas for photos for every day! <br />Begin to write the story of your life.</span>
+				<span id="promo-descr-2" class="landing-text-description" style="display: none;">We Heart Pics allows you to not think about what <br/>to shoot. Place photos into a proper categories <br/>and try to fill them all!</span>
+				<span id="promo-descr-3" class="landing-text-description" style="display: none;">Invite your friends or make a new ones on We Heart Pics <br/>and follow their stories, “like”, comment on pictures, <br/>or download them on your phone.</span>
+
+				<div class="landing-text-bottom">
+					<div class="text-scrollable">
+						<span id="promo-text-1-bottom" class="landing-text-header">Hundreds of new ideas</span>
+						<span id="promo-text-2-bottom" class="landing-text-header">Organize moments</span>
+						<span id="promo-text-3-bottom" class="landing-text-header">Be closer to your friends</span>
+					</div>
+				</div>
+
+				<div class="landing-video" id="landing-video-1" onclick="WHP.pages.landing.showVideo();"></div>
+
+				<div class="landing-buttons">
+					<a href="https://itunes.apple.com/us/app/we-heart-pics/id488515478" target="_blank"><img src="/gui/web_landing/app_store.png" alt="App Store" style="margin-right: 15px;" /></a>
+					<a href="https://play.google.com/store/apps/details?id=com.weheartpics" target="_blank"><img src="/gui/web_landing/google_play.png" alt="Google Play" /></a>
+				</div>
+			</div>
+			<div id="landing-img" class="landing-img">
+				<div id="landing-img-scrollable">
+					<img src="/gui/web_landing/image1.jpg" alt="1" />
+					<img src="/gui/web_landing/image2.jpg" alt="2" />
+					<img src="/gui/web_landing/image3.jpg" alt="3" />
+				</div>
+			</div>
+		</div>
+
+		<div id="photo" class="photo">
+			<div style="line-height:0px; font-size:0px; height:2px;"></div>
+
+			<div class="photobig_photo_container" style="display: none;">
+				<div class="photobig_share_buttons_cont">
+					<div class="photobig_share_elem" onselectstart="cancelEvent(event);"><div onClick="WHP.pages.photo.share.clickFB(event);" class="photobig_share_fb_0"></div></div>
+					<div class="photobig_share_elem" onselectstart="cancelEvent(event);"><a class="photobig_share_tw_0" target="_blank" onclick="WHP.pages.photo.share.clickTW(event);" href="http://twitter.com/intent/tweet?text=I like this photo on the WeHeartPics"></a></div>
+					<div class="photobig_share_elem" onselectstart="cancelEvent(event);"><div onClick="WHP.pages.photo.share.clickPT(event);" class="photobig_share_pt_0"></div></div>
+				</div>
+				<div class="photobig_photo_container2">
+					<div class="photobig_image_container_0">
+						<div class="controls_container_block" style="position: relative;">
+							<span class="photobig_image_container"></span>
+							<div class="photobig_slider" onselectstart="cancelEvent(event);">
+								<div class="labels">
+									<div class="photobig_label"></div>
+									<div class="photobig_backward"></div>
+									<div class="photobig_forward"></div>
+								</div>
+							</div>
+						</div>
+
+						<div class="photobig_like_shadow"></div>
+						<div onselectstart="cancelEvent(event);" class="photobig_likes_0"><div class="photobig_likes_label"></div></div>
+
+						<div onselectstart="cancelEvent(event);" class="remove_image_ico" style="position: absolute; left:-47px; top:19px;">
+							<div class="remove_window" style="display:none; z-index:800; width:212px; height:89px; background-color:#f8f7f7;">
+								<div class="delete_menu_v"></div>
+								<div class="controls_black_label l10n_sure" style="margin:auto; text-align:center;">Sure?</div>
+								<div class="line_wrapper" style=" width:90%;height:30px; background-position:center center;"></div>
+								<div class="controls_noauth_social_container">
+									<table style="width:100%; margin:auto;"><tr>
+										<td align="center" valign="middle">
+											<div class="unfollow_button" onselectstart="cancelEvent(event);" >
+												<div class="unfollow_button_left"></div><div class="unfollow_button_middle" style="width:70px;">
+												<div class="unfollow_button_label l10n_yes" style="position:relative; top:2px;">Yes</div>
+											</div><div class="unfollow_button_right"></div>
+											</div>
+
+										</td>
+
+										<td align="center" valign="middle">
+											<div class="unfollow_button" onselectstart="cancelEvent(event);">
+												<div class="unfollow_button_left"></div><div class="unfollow_button_middle" style="width:70px;">
+												<div class="unfollow_button_label" style="position:relative; top:2px;">Cancel</div>
+											</div><div class="unfollow_button_right"></div>
+											</div>
+										</td>
+									</tr></table>
+								</div>
+							</div>
+						</div>
+
+						<div class="photobig_text_container">
+							<b><a class="photobig_theme_text"></a></b><br/>
+							<span class="photobig_theme">by</span>
+							<a class="photobig_author_name"></a><span style="margin-left:6px;" class="photobig_timeshtamp"></span>
+						</div>
+					</div>
+				</div>
+			</div>
+			<img class="photobig_shadow" src="/gui/photobig_shadow.png?whp35" style="display:none;" />
+
+			<br/>
+
+
+
+
+			<div style="width:400px; margin:auto;text-align: center;margin-top: 32px;">
+				<div class="timeline_caption_photo" style="text-align: left;">
+					<div class="timeline_caption_text_photo"></div>
+				</div>
+			</div>
+
+
+
+
+			<div class="heart_split_container">
+				<div class="heart_split"></div>
+			</div>
+
+			<div class="photobig_addcomment_container">
+				<span class="photobig_comments_count"></span><span class="photobig_addnew" onselectstart="cancelEvent(event);" ></span>
+				<div class="line_wrapper" style="position: absolute;bottom: 0px;"></div>
+			</div>
+
+			<div class="photobig_comments_container"></div>
+
+
+			<div class="heart_split_container">
+				<div class="heart_split"></div>
+			</div>
+
+			<div class="photobig_likesbox_holder" style="display:none;">
+				<table width="100%" class="photobig_likesbox_container">
+					<tr>
+						<td width="50%" align="left" valign="top" style="padding-bottom:20px;padding-right:15px;">
+							<div class="photobig_like_holder">
+								<div class="photobig_like_header"></div>
+								<div class="photobig_like_body"><span class="photobig_like_username"></span><span class="photobig_like_body_cont"></span></div>
+							</div>
+						</td>
+						<td class="line_wrapper_v">
+						</td>
+						<td width="50%" align="left" valign="top" style="padding-bottom:20px;padding-left:15px;">
+							<div class="photobig_dislike_holder">
+								<div class="photobig_like_header"></div>
+								<div class="photobig_like_body"><span class="photobig_like_username"></span><span class="photobig_like_body_cont"></span></div>
+							</div>
+						</td>
+					</tr>
+				</table>
+
+			</div>
+
+			<br/>  <br/>  <br/>  <br/>
+		</div>
+
+
+
+
+		
+		
+		<div id="template_photobig_comment">
+			<div class="comments_container">
+				<div class="comments_container_marginer">
+					<div class="comment_container">
+						<div class="comment_header">
+							 <a class="comment_username"></a><span class="comment_info" style="float:right"></span>
+						</div>   
+						<div class="comment_body"></div>        
+					 </div>                       
+				 </div>
+				 <div class="line_wrapper"></div>
+			</div>
+		</div>
+		
+		 <div id="template_photobig_newcomment">
+						<div class="comments_container">
+							<div class="comments_container_marginer">
+								<div class="comment_container">
+									<div class="comment_header">
+										<a class="comment_username"></a><span class="comment_info" style="float:right"></span>
+									</div>
+									<div class="comment_body" style="margin-top: 10px;"><textarea class="photo_newcomment_commentinput"
+																						onKeyPress="WHP.pages.photo.comments.commentOnKey(event);"
+																						onKeyUp="WHP.pages.photo.comments.commentOnKey(event);"  ></textarea>
+									</div>
+
+								</div>
+							 </div>
+							 <div class="photo_newcomment_controls" >
+									<div class="fast_comment_ok" onClick="WHP.pages.photo.comments.postComment(event);" ></div>
+									<div class="fast_comment_x" onClick="WHP.pages.photo.comments.cancelComment(event);" ></div>
+							 </div> 
+							 <div class="line_wrapper"></div>
+						</div>
+					</div>
+					
+
+	</div>
+	
+	
+	<div style="position:absolute; left:0px; top:0px; height:100%; width:100%;">
+
+
+
+
+
+	<div id="main_fader" class="main_fader"></div>
+		<div style="position:absolute; height:0px; width:0px; left:0px; top:0px; z-index:900;">
+
+				<div id="controls_auth_window2"  class="controls_auth_window2" style="display:none; z-index:800; height: auto;">
+
+					<div class="login_box">
+						<div class="form_label_sign" style="font-size: 24px; width: auto; margin-bottom: 8px; font-weight: lighter; margin-top: 20px; text-align: center;" id="header_sign_in1">Sign in</div>
+
+						<div style="width:220px; margin: auto; margin-top:30px; text-align: center; position: relative; left:3px;">
+							<div class="signin_fb_button" style="margin-right:30px;" onClick="WHP.loginMenus.hideLoginMenu(); WHP.auth.FB.login(event);"></div>
+							<div class="signin_tw_button" onClick="WHP.loginMenus.hideLoginMenu(); WHP.auth.TW.login(event);"></div>
+							<div class="signin_mail_button" style="margin-left:20px;" ></div>
+						</div>
+					</div>
+					<div class="login_box">
+
+						<div class="form_error_message" style="margin-top:12px; font-size: 12px;text-align: center; height: 14px;"></div>
+
+						<div class="signin_input" style="margin-top:13px;">
+							<input name="email" placeholder="E-mail" type="text" maxlength="32"  class="form_input_field_sign" />
+						</div>
+						<div class="signin_input" style="margin-top:10px;">
+							<input  name="passw" placeholder="Password" type="password" maxlength="16"  class="form_input_field_sign" />
+							<div class="form_forgot" style="position: absolute; right:2px; top:5px; cursor:pointer;" id="header_forgot1">Forgot?</div>
+						</div>
+
+						<div onselectstart="cancelEvent(event);" class="form_confirm_button" style="font-size: 14px; margin:auto; margin-top: 18px;  width:208px; text-align: right;">
+							<span class="l10n_login">Login</span>&nbsp;<div class="arrow_right_small" style="position: relative; top:9px;"></div>
+						</div>
+						<div style="clear:both"></div>
+					</div>
+					<div class="login_box">
+						<div class="line_1px" style="background-color: #ededed; height:1px; line-height: 0px; font-size: 0px; width:100%;"></div>
+						<div class="form_label_sign_red" style="cursor: pointer;font-size: 20px; width: auto; margin-bottom: 0px; font-weight: lighter; margin-top: 20px; text-align: center;">Register with e-mail</div>
+
+					</div>
+
+					<div class="login_box" style="position: relative; top:-10px;">
+						<div class="form_error_message" style="font-size: 12px;text-align: center; height: 14px;"></div>
+
+						<div class="signin_input" style="margin-top:13px;">
+							<input placeholder="E-mail" type="text" maxlength="32"  class="form_input_field_sign" />
+						</div>
+						<div class="signin_input" style="margin-top:10px;">
+							<input placeholder="Password" type="password" maxlength="16"  class="form_input_field_sign" />
+						</div>
+
+						<div onselectstart="cancelEvent(event);" class="form_confirm_button" style="font-size: 14px; margin:auto; margin-top: 18px;  width:208px; text-align: right;">
+							<span class="l10n_proceed">Proceed</span>&nbsp;<div class="arrow_right_small" style="position: relative; top:9px;"></div>
+						</div>
+						<div style="clear:both"></div>
+					</div>
+
+					<div class="login_box" style="position: relative; top:-10px;">
+						<div class="form_error_message" style="font-size: 12px;text-align: center; height: 14px;"></div>
+
+						<div class="signin_input" style="margin-top:13px;">
+							<input placeholder="First name" type="text" maxlength="32"  class="form_input_field_sign" />
+						</div>
+						<div class="signin_input" style="margin-top:10px;">
+							<input placeholder="Last name" type="text" maxlength="32"  class="form_input_field_sign" />
+						</div>
+
+						<div style="width:207px; margin: auto;">
+							<div onselectstart="cancelEvent(event);" class="form_confirm_button2" style="font-size: 14px; margin:auto; margin-top: 18px;  width:10px; text-align: right;">
+								<div class="arrow_left_small" style="position: relative; top:9px;"></div>
+							</div>
+
+							<div onselectstart="cancelEvent(event);" class="form_confirm_button2" style="font-size: 14px; margin:auto; margin-top: 18px;  width:192px; text-align: right;">
+								<span class="l10n_create_account">Create account</span>&nbsp;<div class="arrow_right_small" style="position: relative; top:9px;"></div>
+							</div>
+						</div>
+						<div style="clear:both"></div>
+					</div>
+
+					<div class="login_box">
+						<div class="form_label_sign" style="font-size: 24px; width: auto; margin-bottom: 8px; font-weight: lighter; margin-top: 20px; text-align: center; color:#111;" id="header_confirmation1">Confirmation</div>
+
+						<div class="form_error_message" style="font-size: 12px;text-align: center; height: 14px;"></div>
+						<div class="form_label_sign" style="font-size: 15px; width: auto; margin-bottom: 8px; font-weight: lighter; margin-top: 10px; text-align: center;" id="header_confirmation_email1">We have sent e-mail with<br/> confirmation link. Please confirm.</div>
+
+
+						<div onselectstart="cancelEvent(event);" class="form_confirm_button" style="display:none;font-size: 14px; margin:auto; margin-top: 22px;  width:208px; text-align: center;">
+							<span class="l10n_resend">Resend</span>&nbsp;<div class="arrow_right_small" style="position: relative; top:9px;"></div>
+						</div>
+					</div>
+
+					<div class="login_box">
+						<div class="form_label_sign" style="font-size: 24px; width: auto; margin-bottom: 8px; font-weight: lighter; margin-top: 20px; text-align: center;" id="header_connect_friends1">Connect with friends</div>
+
+						<div class="form_error_message" style="font-size: 12px;text-align: center; height: 14px; margin-top:5px; margin-bottom:5px;"></div>
+
+
+						<div style="margin-top:20px;width: 100px;margin: auto; margin-bottom:20px;">
+							<div class="signin_fb_button" style="margin-right:30px;" >
+								<div class="ok_mini"></div>
+							</div>
+							<div class="signin_tw_button" >
+								<div class="ok_mini"></div>
+							</div>
+						</div>
+
+						<div class="findfriends_texts2" style="width:200px;">
+							<img src="/gui/dot_pic.png" class="dot_img2" /><span class="header_autoscan">Auto-scan who of your friends joined</span><br/>
+						</div>
+						<div class="findfriends_texts2" style="width:200px;">
+							<img src="/gui/dot_pic.png" class="dot_img2" /><span class="header_instant">Instantly find friends who are already here </span><br/>
+						</div>
+						<div class="findfriends_texts2" style="width:200px;">
+							<img src="/gui/dot_pic.png" class="dot_img2" /><span class="header_faster">Faster sharing and sign in </span><br/>
+						</div>
+
+					</div>
+				</div>
+
+
+			<div  id="set_login_pw" class="controls_auth_window2" style="display:none; height: 268px;">
+
+				<div class="form_label_sign" style="font-size: 24px; width: auto; margin-bottom: 8px; font-weight: lighter; margin-top: 29px; text-align: center;" id="auth_account">Account</div>
+				<div class="form_label_sign" style="font-size: 16px; width: auto; margin-bottom: 8px; font-weight: lighter; margin-top: 10px; text-align: center;" id="auth_set_email_pass">Set e-mail and password</div>
+
+				<div class="form_error_message" style="margin-top:4px; font-size: 12px;text-align: center; height: 14px; margin-bottom: 16px;"></div>
+
+				<div class="signin_input" style="margin-top:9px;">
+					<input  name="email" placeholder="E-mail" type="text" maxlength="32"  class="form_input_field_sign" />
+				</div>
+				<div class="signin_input" style="margin-top:10px;">
+					<input name="passw" placeholder="Password" type="password" maxlength="16"  class="form_input_field_sign" />
+				</div>
+
+				<div onselectstart="cancelEvent(event);" class="form_confirm_button" style="float:right; margin-top: 18px; font-size: 14px; margin-right: 38px;">
+					<span class="l10n_done">Done</span>&nbsp;<div class="arrow_right_small" style="position: relative; top:9px;"></div>
+				</div>
+			</div>
+
+
+			<div  id="set_name" class="controls_auth_window2" style="display:none; height: 231px;">
+
+				<div class="form_label_sign" style="color:#222;font-size: 24px; width: auto; margin-bottom: 8px; font-weight: lighter; margin-top: 29px; text-align: center;" id="auth_change_name">Change name</div>
+
+				<div class="form_error_message" style="margin-top:4px; font-size: 12px;text-align: center; height: 14px; margin-bottom: 16px;"></div>
+
+				<div class="signin_input" style="margin-top:9px;">
+					<input placeholder="First name" type="text" maxlength="24"  class="form_input_field_sign" />
+				</div>
+				<div class="signin_input" style="margin-top:10px;">
+					<input placeholder="Last name" type="text" maxlength="24"  class="form_input_field_sign" />
+				</div>
+
+				<div onselectstart="cancelEvent(event);" class="form_confirm_button" style="float:right; margin-top: 18px; font-size: 14px; margin-right: 38px;">
+					<span class="l10n_done">Done</span>&nbsp;<div class="arrow_right_small" style="position: relative; top:9px;"></div>
+				</div>
+			</div>
+
+			<div  id="set_login" class="controls_auth_window2" style="display:none; height: 200px;">
+				<div class="page_masker" style="position: relative; width: 208px; margin:auto;" onclick="return cancelEvent(event);">
+					<div class="login_page" style="position: absolute; top:0px; left:0px;">
+						<div class="form_label_sign" style="font-size: 24px; width: auto; margin-bottom: 8px; font-weight: lighter; margin-top: 29px; text-align: center;" id="auth_your_password">Your password</div>
+
+						<div class="form_error_message" style="margin-top:16px;font-size: 12px; text-align: center; height: 14px; margin-bottom: 12px;"></div>
+
+						<div class="signin_input" style="margin-top:10px;">
+							<input name="passw" placeholder="Password" type="password" maxlength="16"  class="form_input_field_sign" />
+						</div>
+
+						<div onselectstart="cancelEvent(event);" class="form_confirm_button" style="float:right; margin-top: 18px; font-size: 14px; margin-right: 0px;">
+							<span class="l10n_proceed">Proceed</span>&nbsp;<div class="arrow_right_small" style="position: relative; top:9px;"></div>
+						</div>
+					</div>
+					<div class="login_page" style="position: absolute; top:0px; left:285px;">
+						<div class="form_label_sign" style="font-size: 24px; width: auto; margin-bottom: 8px; font-weight: lighter; margin-top: 29px; text-align: center;" id="auth_new_email">New e-mail</div>
+
+						<div class="form_error_message" style="margin-top:16px; font-size: 12px;text-align: center; height: 14px; margin-bottom: 12px;"></div>
+
+						<div class="signin_input" style="margin-top:10px;">
+							<input name="passw" placeholder="E-mail" type="text" maxlength="32"  class="form_input_field_sign" />
+						</div>
+
+						<div onselectstart="cancelEvent(event);" class="form_confirm_button" style="float:right; margin-top: 18px; font-size: 14px; margin-right: 0px;">
+							<span class="l10n_done">Done</span>&nbsp;<div class="arrow_right_small" style="position: relative; top:9px;"></div>
+						</div>
+					</div>
+				</div>
+			</div>
+
+			<div  id="popup_message" class="popup_message" style="display:none; ">
+				<div class="servicemessage_close"></div>
+				<div class="message_icons"></div>
+				<div class="form_label_sign" style="font-size: 24px; width: auto; margin-bottom: 8px; font-weight: lighter; margin-top: 29px; text-align: left;">header</div>
+				<div class="form_label_sign" style="font-size: 21px; width: auto; margin-bottom: 29px; font-weight: lighter; margin-top: 4px; text-align: left; height:auto; color:#222;">text message</div>
+				<img src="/gui/photobig_shadow.png?whp35" class="shadow_message" />
+			</div>
+		</div>
+
+
+		<div id="main_object" class="main_object">
+			<div class="main-content-container">
+				<div id="header-fixed-helper" class="main-header-fixed">
+					<div class="main-header" id="header">
+						<a href="/" class="main-header-logo">
+							<img src="/gui/web_landing/whp_logo_bigger.png" id="main-header-logo-img" alt="WE HEART PICS" />
+						</a>
+
+						<div class="main-header-l10n" style="display: none;">
+							<span id="l10n_ru">Ru</span>&nbsp;/&nbsp;<span id="l10n_en">En</span>
+						</div>
+
+						<div id="menu_layer" class="menu_layer" style="z-index: 2;">
+						<div id="header_controls" class="header_controls" style="z-index:100;">
+							<div id="noauth_controls" class="noauth_controls">
+								<div class="controls_about_container">
+									<span class="controls_link_text" id="download_popup_open_noauth">&nbsp;</span>
+								</div>
+
+								<div class="controls_popular_container">
+									<a href="/popular" class="controls_link_text"><span class="l10n_popular">Popular</span></a>
+								</div>
+
+								<div class="controls_stories_container">
+									<a href="/stories" class="controls_link_text" id="l10n_stories">Stories</a>
+								</div>
+
+								<div class="controls_login_container">
+									<span class="controls_link_text" id="l10n_log_in">Log in</span>
+									<div class="controls_auth_window" style="display:none; z-index:800; height: auto;">
+										<div class="controls_box_arrow_new"></div>
+
+										<div class="login_box">
+											<div class="form_label_sign" style="font-size: 24px; width: auto; margin-bottom: 8px; font-weight: lighter; margin-top: 20px; text-align: center;" id="header_sign_in">Sign in</div>
+
+											<div style="width:220px; margin: auto; margin-top:30px; text-align: center; position: relative; left:3px;">
+												<div class="signin_fb_button" style="margin-right:30px;" onClick="WHP.loginMenus.hideLoginMenu(); WHP.auth.FB.login(event);"></div>
+												<div class="signin_tw_button" onClick="WHP.loginMenus.hideLoginMenu(); WHP.auth.TW.login(event);"></div>
+												<div class="signin_mail_button" style="margin-left:20px;" ></div>
+											</div>
+										</div>
+										<div class="login_box">
+
+											<div class="form_error_message" style="margin-top:12px; font-size: 12px;text-align: center; height: 14px;"></div>
+
+											<div class="signin_input" style="margin-top:13px;">
+												<input name="email" placeholder="E-mail" type="text" maxlength="32"  class="form_input_field_sign" />
+											</div>
+											<div class="signin_input" style="margin-top:10px;">
+												<input  name="passw" placeholder="Password" type="password" maxlength="16"  class="form_input_field_sign" />
+												<div class="form_forgot" style="position: absolute; right:2px; top:5px; cursor:pointer;" id="header_forgot">Forgot?</div>
+											</div>
+
+											<div onselectstart="cancelEvent(event);" class="form_confirm_button" style="font-size: 14px; margin:auto; margin-top: 18px;  width:208px; text-align: right;">
+												<span class="l10n_login">Login</span>&nbsp;<div class="arrow_right_small" style="position: relative; top:9px;"></div>
+											</div>
+											<div style="clear:both"></div>
+										</div>
+										<div class="login_box">
+											<div class="line_1px" style="background-color: #ededed; height:1px; line-height: 0px; font-size: 0px; width:100%;"></div>
+											<div class="form_label_sign_red" style="font-size: 20px; width: auto; margin-bottom: 0px; font-weight: lighter; margin-top: 20px; text-align: center;" id="header_register_email">Register with e-mail</div>
+
+										</div>
+
+										<div class="login_box" style="position: relative; top:-10px;">
+											<div class="form_error_message" style="font-size: 12px;text-align: center; height: 14px;"></div>
+
+											<div class="signin_input" style="margin-top:13px;">
+												<input placeholder="E-mail" type="text" maxlength="32"  class="form_input_field_sign" />
+											</div>
+											<div class="signin_input" style="margin-top:10px;">
+												<input placeholder="Password" type="password" maxlength="16"  class="form_input_field_sign" />
+											</div>
+
+											<div onselectstart="cancelEvent(event);" class="form_confirm_button" style="font-size: 14px; margin:auto; margin-top: 18px;  width:208px; text-align: right;">
+												<span class="l10n_proceed">Proceed</span>&nbsp;<div class="arrow_right_small" style="position: relative; top:9px;"></div>
+											</div>
+											<div style="clear:both"></div>
+										</div>
+
+										<div class="login_box" style="position: relative; top:-10px;">
+											<div class="form_error_message" style="font-size: 12px;text-align: center; height: 14px;"></div>
+
+											<div class="signin_input" style="margin-top:13px;">
+												<input placeholder="First name" type="text" maxlength="32"  class="form_input_field_sign" />
+											</div>
+											<div class="signin_input" style="margin-top:10px;">
+												<input placeholder="Last name" type="text" maxlength="32"  class="form_input_field_sign" />
+											</div>
+
+											<div style="width:207px; margin: auto;">
+												<div onselectstart="cancelEvent(event);" class="form_confirm_button2" style="font-size: 14px; margin:auto; margin-top: 18px;  width:10px; text-align: right;">
+													<div class="arrow_left_small" style="position: relative; top:9px;"></div>
+												</div>
+
+												<div onselectstart="cancelEvent(event);" class="form_confirm_button2" style="font-size: 14px; margin:auto; margin-top: 18px;  width:192px; text-align: right;">
+													<span class="l10n_create_account">Create account</span>&nbsp;<div class="arrow_right_small" style="position: relative; top:9px;"></div>
+												</div>
+											</div>
+											<div style="clear:both"></div>
+										</div>
+
+										<div class="login_box">
+											<div class="form_label_sign" style="font-size: 24px; width: auto; margin-bottom: 8px; font-weight: lighter; margin-top: 20px; text-align: center; color:#111;" id="header_confirmation">Confirmation</div>
+
+											<div class="form_error_message" style="font-size: 12px;text-align: center; height: 14px;"></div>
+											<div class="form_label_sign" style="font-size: 15px; width: auto; margin-bottom: 8px; font-weight: lighter; margin-top: 10px; text-align: center;" id="header_confirmation_email">We have sent e-mail with<br/> confirmation link. Please confirm.</div>
+
+
+											<div onselectstart="cancelEvent(event);" class="form_confirm_button" style="display:none;font-size: 14px; margin:auto; margin-top: 22px;  width:208px; text-align: center;">
+												<span class="l10n_resend">Resend</span>&nbsp;<div class="arrow_right_small" style="position: relative; top:9px;"></div>
+											</div>
+										</div>
+
+										<div class="login_box">
+											<div class="form_label_sign" style="font-size: 24px; width: auto; margin-bottom: 8px; font-weight: lighter; margin-top: 20px; text-align: center;" id="header_connect_friends">Connect with friends</div>
+
+											<div class="form_error_message" style="font-size: 12px;text-align: center; height: 14px; margin-top:5px; margin-bottom:5px;"></div>
+
+
+											<div style="margin-top:20px;width: 100px;margin: auto; margin-bottom:20px;">
+												<div class="signin_fb_button" style="margin-right:30px;" >
+													<div class="ok_mini"></div>
+												</div>
+												<div class="signin_tw_button" >
+													<div class="ok_mini"></div>
+												</div>
+											</div>
+
+											<div class="findfriends_texts2" style="width:200px;">
+												<img src="/gui/dot_pic.png" class="dot_img2" /><span class="header_autoscan">Auto-scan who of your friends joined</span><br/>
+											</div>
+											<div class="findfriends_texts2" style="width:200px;">
+												<img src="/gui/dot_pic.png" class="dot_img2" /><span class="header_instant">Instantly find friends who are already here </span><br/>
+											</div>
+											<div class="findfriends_texts2" style="width:200px;">
+												<img src="/gui/dot_pic.png" class="dot_img2" /><span class="header_faster">Faster sharing and sign in </span><br/>
+											</div>
+
+										</div>
+
+									</div>
+								</div>
+							</div>
+							<div id="auth_controls" onselectstart="cancelEvent(event);" class="auth_controls" style="z-index:100;">
+								<div class="controls_profile_container">
+									<a href="/profile" class="controls_link_text" id="header_profile">Profile</a>
+								</div>
+
+								<div class="controls_about_container">
+									<span class="controls_link_text" id="download_popup_open_auth">&nbsp;</span>
+								</div>
+
+								<div class="controls_timeline_container">
+									<a href="/timeline" class="controls_link_text" id="header_timeline">Timeline</a>
+								</div>
+
+								<div class="controls_stories_container">
+									<a href="/stories" class="controls_link_text" id="header_stories">Stories</a>
+								</div>
+
+								<div class="controls_popular_container">
+									<a href="/popular" class="controls_link_text"><span class="l10n_popular">Popular</span></a>
+								</div>
+
+								<div class="controls_popular_container">
+									<span id="show_upload" class="controls_link_text_red"><span class="l10n_upload">Upload</span></span>
+								</div>
+
+								<div class="controls_settings_container" style="position:relative; top:4px;">
+									<a href="/settings" class="settings_menu"></a>
+								</div>
+
+								<div class="controls_logout_container">
+									<div class="controls_logout_button" ></div>
+								</div>
+							</div>
+						</div>
+					</div>
+
+					<div class="backbutton" id="photobackbutton" title="Back" onclick="history.back()"></div>
+
+					</div>
+				</div>
+
+				<div id="download_window" class="notifications_window" style="position: absolute; left:0px; top:0px;"></div>
+
+				<div class="console_ie" id="console_ie"></div>
+
+				<div id="main_canvas" class="main_canvas" style="z-index: 1;">
+					<div id="servicemessages" class="servicemessages" style="position: relative; top:87px; display: none; z-index: 9;display: none; ">
+						<div class="servicemessage_plate">
+							<div class="servicemessage_close"></div>
+							<div class="servicemessage_body" style="width:700px; text-align: center; margin:auto; margin-bottom: 3px;">
+								<span style="font-family: Helvetica, Arial, Tahome; font-size: 28px; color: #979797; font-weight: lighter; margin-right: 15px;" id="tl_join_friends">Get ideas for photos every day!</span>
+								<a href="https://itunes.apple.com/us/app/we-heart-pics/id488515478" target="_blank"><img src="/gui/web_landing/app_store.png" alt="App Store" style="width: 100px; vertical-align: bottom;" /></a>
+								<a href="https://play.google.com/store/apps/details?id=com.weheartpics" target="_blank"><img src="/gui/web_landing/google_play.png" alt="Google Play" style="width: 100px; vertical-align: bottom;" /></a>
+							</div>
+						</div>
+						<img class="photobig_shadow" width="799" height="17" style="top:0px;width:799px;" src="/gui/photobig_shadow.png?whp35" />
+					</div>
+
+					<div id="ogmessage" onselectstart="cancelEvent(event);" class="servicemessages" style="position: relative; top:87px;z-index: 9;display: none; ">
+						<div class="servicemessage_plate" >
+							<div class="servicemessage_close"></div>
+							<div class="servicemessage_body" style="margin-bottom:12px; width: 100%; text-align: center; margin:auto; position: relative;top: -7px;">
+								<div class="og_fb_ico" style=" position: relative; top: 9px; "></div>
+								<span style="font-family: Helvetica, Arial, Tahome; font-size: 25px; color: #282828; font-weight: lighter; margin-left: 15px; position: relative; top:-2px;" id="tl_add_fb_tl">Add WeHeartPics to your Facebook Timeline.</span>
+								<span style="font-family: Helvetica, Arial, Tahome; font-size: 25px; color: #979797; font-weight: lighter; margin-right: 23px; cursor: pointer; position: relative; top:-2px;" class="why_button" id="tl_add_fb_why">Why?</span>
+								<div class="ogmessage_try" style="position: relative; top: 13px;"></div>
+							</div>
+							<div class="servicemessage_body" style="overflow:hidden;margin-bottom:12px; width:586px; text-align: left; margin:auto; margin-bottom: 5px; height:0px;">
+								<br/><br/><span style="font-family: Helvetica, Arial, Tahome; font-size: 16px; line-height: 21px; color: #515151; font-weight: lighter;" id="tl_add_fb_by">By connecting WeHeartPics to your Facebook Timeline, you don’t have a chance anymore to miss a feedback from people you care about regardless they use WeHeartPics or not.</span>
+								<br/><br/><div style=" text-align: center; "><img width="360" height="350" src="/gui/web_opengraph_image.png" /></div><br/><br/>
+								<span style="font-family: Helvetica, Arial, Tahome; font-size: 16px; line-height: 21px; color: #515151; font-weight: lighter;" id="tl_add_fb_we">We will transmit photos you posted and liked at WeHeartPics to Facebook and group them into beautiful and informative reports.</span>
+								<br/><div class="ogmessage_tryout" style="position: relative; top: 13px; display: block; margin:auto; margin-top: 10px; margin-bottom: 10px;"></div>
+								<br/>
+								<div style="font-family: Helvetica, Arial, Tahome; font-size: 12px; color: #979797; font-style: italic; text-align: center; width: 100%;" id="tl_fb_add_disc">* You can disconnect WeHeartPics from Facebook Timeline at any time you want.</div>
+
+							</div>
+						</div>
+						<img class="photobig_shadow" width="799" height="17" style="top:0px;width:799px;" src="/gui/photobig_shadow.png?whp35" />
+					</div>
+
+					<div id="loading_tab" class="notifications_loading_tab" style="top:75px; width:90px; margin:auto;"></div>
+					<div id="content" class="content_hidden" style="z-index:5; position: relative;"></div>
+				</div>
+			</div>
+
+			<div class="main-footer-container">
+				<div id="main-footer" class="main-footer">
+					<div class="footer_holder">
+						<span title="Coming soon" class="footer_link_text" id="l10n_newsletter">Newsletter</span>
+						<!--<a href="#" onclick="WHP.newsletter.show()" class="footer_link_text" id="l10n_newsletter">Newsletter</a>-->
+						<a target="_blank" href="/docs/terms_of_service.html" class="footer_link_text" id="l10n_terms">Terms of service</a>
+						<a target="_blank" href="/docs/privacy_policy.html" class="footer_link_text" id="l10n_privacy">Privacy policy</a>
+						<a target="_blank" href="/docs/jobs.html" class="footer_link_text"><span id="l10n_jobs">Jobs</span><img src="/gui/web_landing/jobs_counter.png" class="footer_counter" /></a>
+						<a href="mailto:hi@weheartpics.com" class="footer_link_text" id="l10n_contact">Contacts us</a>
+
+						<a href="http://vk.com/weheartpics" class="footer_link_text_right" id="l10n_vk">VKontakte</a>
+						<a href="http://twitter.com/WeHeartPicsCom" class="footer_link_text_right">Twitter</a>
+						<a href="http://facebook.com/weheartpics" class="footer_link_text_right">Facebook</a>
+					</div>
+				</div>
+			</div>
+
+		</div>
+	</div>
+
+	<div id="upload_popup" class="upload_popup" style="display: none;">
+		<div id="upload_close"></div>
+
+		<div class="upload-breadcrumbs" id="upload-breadcrumbs" style="display: none;">
+			<div id="upload-breadcrumb-1" class="active">Upload</div>
+			<div class="upload-arrow-right"></div>
+			<div id="upload-breadcrumb-2">Edit</div>
+			<div class="upload-arrow-right inactive"></div>
+			<div id="upload-breadcrumb-3">Post</div>
+		</div>
+
+		<div class="upload-source" id="upload-source">
+			<div class="upload-source-header">Pick a source</div>
+			<div id="upload-source-from">
+				<label for="upload-file" id="upload-from-local">Browse</label>
+				<!--<div id="upload-from-facebook">Facebook</div>-->
+				<!--<div id="upload-from-instagram">Instagram</div>-->
+			</div>
+			<input type="file" name="local_file" id="upload-file" style="visibility: hidden;" />
+		</div>
+
+		<div class="upload-facebook" id="upload-facebook" style="display: none;">
+			<div class="upload-source-header"><div class="upload-arrow-left"></div>Upload</div>
+			<div class="upload-source-name">Facebook:</div>
+			<div id="upload-facebook-items" class="upload-source-items">Loading...</div>
+		</div>
+
+		<div class="upload-gallery-select" id="upload-gallery-select" style="display: none;">
+			<div class="upload-gallery-header">Facebook</div>
+			<div class="upload-gallery-name" id="upload-gallery-name">My Photos</div>
+			<div class="upload-gallery" id="upload-gallery"></div>
+		</div>
+
+		<div class="upload-instagram" id="upload-instagram" style="display: none;">
+			<div class="upload-gallery-header">Upload</div>
+			<div class="upload-gallery-name">Instagram</div>
+			<div class="upload-gallery"></div>
+		</div>
+
+		<div class="upload-photo" id="upload-photo" style="display: none;">
+			<div id="upload-photo-image">
+				<!--<img src="" alt="" id="photo-canvas-preview" />-->
+				<canvas id="photo-canvas" width="1000" height="1000"></canvas>
+			</div>
+
+			<img src="" alt="" id="image-preload" />
+
+			<div id="upload-photo-text">
+				<div id="upload-photo-reposition">Adjust photo</div>
+				<label for="upload-photo-descr" class="upload-photo-label" id="upload-photo-descr-label">Type description of photo</label>
+				<input type="text" placeholder="Description" id="upload-photo-descr" maxlength="99" />
+				<div class="upload-photo-label" id="upload-photo-share-label">Share this photo</div>
+				<div id="upload-photo-share-items">
+					<label for="share-fb" id="share-fb-label">Facebook</label>
+					<label for="share-twi">Twitter</label>
+					<!--<label for="share-vk">VKontakte</label>-->
+					<input type="checkbox" id="share-fb" style="display: none;" />
+					<input type="checkbox" id="share-twi" style="display: none;" />
+					<!--<input type="checkbox" id="share-vk" style="display: none;" />-->
+				</div>
+				<div id="upload-photo-next">
+					Post<div class="medium-arrow-right"></div>
+				</div>
+			</div>
+		</div>
+
+		<div id="upload-photo-repositioning" style="display: none;">
+			<div id="upload-photo-reposition-block">
+				<img src="" alt="" id="image-reposition" />
+				<div class="fader" style="top: -500px; left: 0; height: 500px; width: 305px; border-bottom: solid 2px #333;"></div>
+				<div class="fader" style="top: 0; left: 303px; width: 500px; height: 305px; border-left: solid 2px #333; background-image: url('/gui/upload/fader.png');"></div>
+				<div class="fader" style="top: 305px; left: 0; height: 500px; width: 305px; border-top: solid 2px #333;"></div>
+				<div class="fader" style="top: 0; left: -499px; width: 500px; height: 305px; border-right: solid 2px #333;"></div>
+			</div>
+			<div id="upload-photo-reposition-header">Move photo to reposition</div>
+			<div id="upload-photo-reposition-done">Done</div>
+		</div>
+
+		<div id="upload-stories-wrapper" style="display: none;">
+			<div id="upload-stories-header">Select a story to post <div id="skip-stories">or skip <div class="medium-arrow-right"></div></div></div>
+			<div class="upload-stories" id="upload-stories">
+				<div id="upload_stories">
+					<div class="stories_head">
+						<div class="stories_icons_cont"></div>
+						<div class="line_wrapper" style="position:absolute; bottom:0px;"></div>
+						<div class="stories_head_v"></div>
+					</div>
+					<div class="notifications_loading_tab"></div>
+					<div class="stories_content"></div>
+					<div class="dailystories_content"></div>
+				</div>
+			</div>
+		</div>
+
+		<div id="upload-success-container" style="display: none;">
+			<div id="upload-success">Uploading...</div>
+		</div>
+
+		<div id="upload-exit" style="display: none;">
+			<div id="upload-exit-container">
+				<div id="upload-exit-header">Photo was not posted yet.</div>
+				<div id="upload-exit-question">Stop posting?</div>
+				<div id="upload-exit-buttons">
+					<div id="upload-exit-quit">Quit</div>
+					<div id="upload-exit-cancel">Cancel</div>
+				</div>
+			</div>
+		</div>
+	</div>
+
+	<div id="newsletter_popup" style="display: none;">
+		<div id="newsletter-close"></div>
+		<form action="." method="post" id="newsletter-form">
+			<label for="newsletter-input" id="newsletter-title">Type your e-mail</label>
+			<input type="email" name="email" id="newsletter-input" placeholder="E-mail" />
+		</form>
+	</div>
+
+	<div id="auth-popup" style="display: none;">
+		<div id="auth-popup_close"></div>
+		<div id="auth-popup_container">
+			<div id="auth-popup_login">
+				<div class="header">Log in</div>
+				<div id="auth-popup_services">
+					<div id="login-via-fb">Facebook</div>
+					<div id="login-via-tw">Twitter</div>
+					<div id="login-via-vk">VKontakte</div>
+					<div id="login-via-email">E-mail</div>
+				</div>
+			</div>
+
+			<div id="auth-popup_register">
+				<div class="header">Register by e-mail</div>
+				<div id="auth-popup_register-form">
+					<input type="email" name="email" id="register-email" placeholder="E-mail" />
+					<input type="password" name="password" id="register-password" placeholder="Password" />
+				</div>
+				<div id="auth-popup_register_next" style="display: none;">Sign up<div class="medium-arrow-right"></div></div>
+				<div class="auth-error" id="register-email-error"></div>
+			</div>
+
+			<div id="auth-popup_register-names" style="display: none;">
+				<div id="auth-popup_register-names_dummy">
+					<div class="dummy">Log in</div>
+					<div class="clearfix"></div>
+					<div class="dummy">Facebook</div>
+					<div class="dummy">Twitter</div>
+					<div class="dummy">VKontakte</div>
+					<div class="dummy">E-mail</div>
+				</div>
+
+				<div class="back-header" id="auth-popup_register_back"><div class="medium-arrow-left"></div>E-mail & password</div>
+
+				<div class="header">Account information</div>
+				<div id="auth-popup_register-names_form">
+					<input type="text" name="first_name" id="register-first_name" placeholder="First name" />
+					<input type="text" name="last_name" id="register-last_name" placeholder="Last name" />
+				</div>
+				<div id="auth-popup_register_ok">Sign up<div class="medium-arrow-right"></div></div>
+				<div class="auth-error" id="register-names-error"></div>
+			</div>
+
+			<div id="auth-popup_login-email" style="display: none;">
+				<div class="back-header" id="auth-popup_login-email_back"><div class="medium-arrow-left"></div>Log in / sign up</div>
+
+				<div class="header">Log in by e-mail</div>
+				<div id="auth-popup_login-email_form">
+					<input type="email" name="email" id="login-email" placeholder="E-mail" />
+					<div class="clearfix"></div>
+					<input type="password" name="password" id="login-password" placeholder="Password" style="float: left;" />
+					<div id="auth-popup_login-email_forgot" style="display: none;">Forgot?</div>
+				</div>
+				<div id="auth-popup_login-email_ok" style="display: none;">Log in<div class="medium-arrow-right"></div></div>
+				<div class="auth-error" id="auth-login-error"></div>
+			</div>
+		</div>
+	</div>
+
+	<div id="video-popup-1" class="video-popup" style="display: none;" onclick="WHP.pages.landing.hideVideo();">
+		<div id="video_close"></div>
+		<div class="video-popup-content" onclick="event.stopPropagation();">
+			<div class="video-popup-video">
+				<iframe src="http://player.vimeo.com/video/53165732" id="video-iframe" width="850" height="485" frameborder="0"
+						webkitAllowFullScreen mozallowfullscreen allowFullScreen></iframe>
+			</div>
+			<div class="video-popup-buttons">
+				<a href="https://itunes.apple.com/us/app/we-heart-pics/id488515478" target="_blank"><img src="/gui/web_landing/app_store.png" alt="App Store" /></a>
+				<a href="https://play.google.com/store/apps/details?id=com.weheartpics" target="_blank"><img src="/gui/web_landing/google_play.png" alt="Google Play" /></a>
+				<!--<a href="#" class="video-popup-signup" id="l10n_video_signup">Sign up</a>-->
+			</div>
+		</div>
+	</div>
+
+	<div id="download_popup_standard" class="download_popup_standard" style="display: none;">
+		<img src="/gui/menu_phone_logo.png" alt="WHP" class="download_popup-logo" />
+		<div class="download_popup-text">
+			<p><strong>We Heart Pics</strong> is a service with ideas <br />for photos for every day!</p>
+
+			<p>Download free <a href="https://itunes.apple.com/us/app/we-heart-pics/id488515478">iPhone</a> or <a href="https://play.google.com/store/apps/details?id=com.weheartpics">Android</a> applications and <a onclick="WHP.controller.navigateTo('/');">take a look inside <span class="small-arrow-right"></span></a></p>
+
+			<p><a href="#" class="download_popup-dontshow" onclick="WHP.download.dontShow(event);"><span class="download_popup-checkbox"></span>&nbsp;Don't show anymore</a></p>
+		</div>
+	</div>
+</body>
+</html>
