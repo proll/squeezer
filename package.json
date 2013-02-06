@@ -19,7 +19,7 @@
     "requirejs": "2.1.x",
     "node-sprite": "~0.1.x",
     "underscore": "1.4.x",
-    "uglify-js": "2.x",
+    "uglify-js": "1.x",
     "uglifycss": "x",
     "nopt": "~2.0.0"
   },
