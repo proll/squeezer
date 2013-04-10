@@ -48,7 +48,7 @@ module.exports = function(grunt) {
 
 		server: {
 			base: "./app",
-			port: 3003,
+			port: 3030,
 			keepalive: true
 		},
 
